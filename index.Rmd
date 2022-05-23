@@ -38,7 +38,4 @@ Racial injustice has not gone away, but I wonder sometimes we may be too biased 
 map
 ```
 <br>
-This map visualize the severity of black-to-white incarceration ratio, which indicates how many blacks are incarcerated for every one white incarcerated, 
-and is important in examining racism across states. **New Jersey**, **Maryland**, **Louisiana**, **New York**, **Mississippi**, and **Illinois** appear to 
-have a higher rate (light red), while the majority of the states show a low rate (dark red to black). This indicates a possibility that black
-people commit more crimes in those states but on the other hand, a potential higher racial disparity.
+This graph depicts the severity of the black-to-white incarceration ratio in the United States over the previous several decades. Between 2006 and 2007, both have an identical number of incarcerations in the United States, but after 2010, the number of white incarcerations begins to exceed the number of black incarcerations.
