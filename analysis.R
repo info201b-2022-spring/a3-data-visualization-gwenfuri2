@@ -93,6 +93,89 @@ layout(title = "Total Incarcerated Black Population in Top 3 States over the Yea
     xaxis = list(title = "Year"),yaxis = list(title = "Total Incarceration Number"))
 
 
+black_white_incarceration <- incarceration_trends %>% 
+select(year, black_jail_pop, black_prison_pop, white_jail_pop, white_prison_pop) %>%
+replace(is.na(.), 0) %>% 
+mutate(black_sum = black_jail_pop + black_prison_pop, white_sum = white_jail_pop + white_prison_pop) %>% 
+group_by(year) %>%
+summarise(black_sum = sum(black_sum), white_sum = sum(white_sum))
+
+variable_comparison <- plot_ly(
+  data = black_white_incarceration,
+  x = ~year,
+  y = ~black_sum,
+  name = "Black",
+  type = 'scatter',
+  mode = 'lines',
+  width = "800") %>%
+  add_trace(
+  y = ~white_sum,
+  name = "White",
+  mode = 'lines') %>% 
+  layout(
+    title = "Black vs. White Total Incarceration Count over the Years",
+    xaxis = list(title = "Year"),
+    yaxis = list(title = "Total Incarceration Number")
+    )
+
+
+state_black_white_ratio <- incarceration_trends %>% 
+select(state, black_jail_pop, black_prison_pop, white_jail_pop, white_prison_pop) %>%
+replace(is.na(.), 0) %>% 
+group_by(state) %>% 
+mutate(black_sum = black_jail_pop + black_prison_pop, 
+       white_sum = white_jail_pop + white_prison_pop) %>% 
+summarise(black_sum = sum(black_sum), white_sum = sum(white_sum)) %>% 
+mutate(rate = black_sum/white_sum) %>% 
+select(-black_sum, -white_sum) %>% 
+arrange(-rate) %>% 
+slice(-c(1))
+      
+      
+      
+      
+state_shape <- map_data("state") %>%
+rename(state = region)
+
+state_shape <- state_shape %>%
+mutate(state = state2abbr(state))
+
+state_shape <- state_shape %>%
+left_join(state_black_white_ratio, by = "state")
+
+map <- ggplot(state_shape) +
+  geom_polygon(mapping = aes(x = long, y = lat, group = group, fill = rate),
+      color = "white",
+      size = .1 
+    ) +
+  coord_map() + 
+  scale_fill_continuous(low = "#132B43", high = "Red") +
+labs(fill = "Ratio") +
+ggtitle("Black-to-White Incarceration Ratio") +
+theme_bw() +
+theme(
+  axis.line = element_blank(),
+  axis.text = element_blank(),
+  axis.ticks = element_blank(), 
+  axis.title = element_blank(),
+  plot.background = element_blank(), 
+  panel.grid.major = element_blank(),
+  panel.grid.minor = element_blank(), 
+  panel.border = element_blank() 
+  
+)
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
 
 
 
