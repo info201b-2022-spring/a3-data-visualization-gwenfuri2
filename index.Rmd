@@ -1,5 +1,6 @@
 ```{r setup, include=FALSE} knitr::opts_chunk$set(echo = TRUE)
-library(knitr) library(ggplot2)
+library(knitr) 
+library(ggplot2)
 source("analysis.R")
 ```
 ## Introduction
