@@ -19,18 +19,13 @@ declined by **`r black_prison_change_year`** between 2006 and 2016. <br>
 ```{r, echo=FALSE}
 trends_over_time
 ```
-
-This graph is included to investigate an intriguing pattern in the total incarcerated black population across states. According to the figure, while California has the highest total number of incarcerated black individuals, this is not the case when comparing year to year. Texas surpassed California in most of the following years after seeing a rise in 2015. It's important looking into why there was a spike and whether Texas will become the state with the largest number of incarcerated black people. <br>
+This graph depicts the severity of the black-to-white incarceration ratio in the United States over the previous several decades.
+Between 2006 and 2007, both have an identical number of incarcerations in the United States, but after 2010, the number of white incarcerations begins to exceed the number of black incarcerations.
 ## Chart 2
 ```{r, echo=FALSE}
 variable_comparison
 ```
-This line graph is included to compare the incarceration count (jail and prison) between black and white people throughout the years. 
-Before analyzing the data, I expected the number of incarcerated black people to be much higher than that of the white since racial discrimination is 
-believed to have been ingrained in the criminal legal and law enforcement system. However, according to the graph, the number of incarcerated white people
-surpassed that of the black around 2010. This result also corresponded to the finding that incarceration counts of black people have declined.
-Racial injustice has not gone away, but I wonder sometimes we may be too biased before exploring the data.
-## Map
+This graph is included to investigate an intriguing pattern in the total incarcerated black population across states. According to the figure, while California has the highest total number of incarcerated black individuals, this is not the case when comparing year to year. Texas surpassed California in most of the following years after seeing a rise in 2015. It's important looking into why there was a spike and whether Texas will become the state with the largest number of incarcerated black people.
 ```{r, echo=FALSE}
 map
 ```
