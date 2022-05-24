@@ -20,7 +20,7 @@ body {
 #Header {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, rgba(89, 40, 145, 0.8), #001440);
+  background: #55d6aa;
   z-index: 4;
   overflow-y: auto;
 }
