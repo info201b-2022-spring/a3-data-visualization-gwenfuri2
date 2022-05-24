@@ -20,3 +20,20 @@ body {
 header{
   background: #55d6aa
 }
+
+nav{
+  float: right;
+}
+
+nav ui {
+  margin: 0;
+    list-style: none;
+}
+
+nav li
+{
+  display: inline-block;
+}
+
+  
+  
