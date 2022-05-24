@@ -19,11 +19,8 @@ declined by **`r black_prison_change_year`** between 2006 and 2016. <br>
 ```{r, echo=FALSE}
 trends_over_time
 ```
-**(Note that only jail incarceration counts were collected in 2017 and 2018.)** <br>
-This chart is included to look into an interesting pattern in the total incarcerated (jail and prison) black population in different states. While California 
-has the highest number of total accumulated incarcerated black people, it is not the case when examining year to year, according to the chart. 
-The number in **Texas** surged in 2015 and has surpassed California in most of the following years. Why there was a surge and whether Texas would become the
-state where the number of incarcerated black population is the highest are areas worth digging into. <br>
+
+This graph is included to investigate an intriguing pattern in the total incarcerated black population across states. According to the figure, while California has the highest total number of incarcerated black individuals, this is not the case when comparing year to year. Texas surpassed California in most of the following years after seeing a rise in 2015. It's important looking into why there was a spike and whether Texas will become the state with the largest number of incarcerated black people. <br>
 ## Chart 2
 ```{r, echo=FALSE}
 variable_comparison
